@@ -12,7 +12,7 @@ jobs:
           node-version: '20'
       - name: npm install    
         run: npm install npx 
-      - name:npm init -y &&  run Linter (ESLint)   
+      - name: npm init -y &&  run Linter (ESLint)   
         run: npm run lint -- --fix
       - name: Formatter (Prettier) npm run prettier
         run: npm run prettier
