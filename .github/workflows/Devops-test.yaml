@@ -12,8 +12,8 @@ jobs:
           node-version: '20'
       - name: npm install    
         run: npm install npx 
-      - name: npm init -y &&  run Linter (ESLint)   
-        run: npm run lint -- --fix
+      - name: npm run lint  
+        run: npm run lint npx
       - name: Formatter (Prettier) npm run prettier
         run: npm run prettier
       - name: Test (Jest) CI=true npm run test
