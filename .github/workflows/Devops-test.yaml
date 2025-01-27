@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '20'
       - name: npm install    
-        run: npm install 
+        run: npm install && npm init -y 
       - name:  run Linter (ESLint)   
         run: npm run lint
       - name:  run Linter (ESLint) 
