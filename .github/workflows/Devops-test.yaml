@@ -1,25 +1,33 @@
-name: Devops-tests
-on: [push]
+name: CI Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+
 jobs:
-  build:   
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: checkout repo
-        uses: actions/checkout@v4
-      - name: setup nodejs
-        uses: actions/setup-node@v4
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: '20'
-      - name: npm install    
-        run: npm install npx 
-      - name: npm run lint  
-        run: npm run lint npx
-      - name: Formatter (Prettier) npm run prettier
+          node-version: 16
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run ESLint
+        run: npm run lint
+
+      - name: Run Prettier
         run: npm run prettier
-      - name: Test (Jest) CI=true npm run test
-        run: npm run test
-      - name: Build npm run build
-        run : npm run build
 
+      - name: Run Jest tests
+        run: CI=true npm run test
 
-
+      - name: Build application
+        run: npm run build
