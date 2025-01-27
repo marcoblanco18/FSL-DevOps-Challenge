@@ -15,6 +15,6 @@ jobs:
         # eslint exits 1 if it finds anything to report
         run: npm install -g eslint
       - name: npm run lint  
-        run: npm init @eslint/config@latest
-      - name: npm run lint1  
-        run: npm run lint
+        run: eslint --init
+      - name: npm run lint2
+        run: npm install -g prettier
