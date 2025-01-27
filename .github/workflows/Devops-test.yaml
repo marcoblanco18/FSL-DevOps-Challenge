@@ -1,7 +1,7 @@
 name: Devops-tests
 on: [push]
 jobs:
-  check-bats-version:
+  build:   
     runs-on: ubuntu-latest
     steps:
       - name: checkout repo
@@ -16,12 +16,12 @@ jobs:
         run: npm run lint
       - name:  run Linter (ESLint) 
         run: npm run lint
-      -name: Formatter (Prettier) npm run prettier
-       run: npm run prettier
-      -name: Test (Jest) CI=true npm run test
-       run: npm run test
-      -name: Build npm run build
-       run : npm run build
+      - name: Formatter (Prettier) npm run prettier
+        run: npm run prettier
+      - name: Test (Jest) CI=true npm run test
+        run: npm run test
+      - name: Build npm run build
+        run : npm run build
 
 
 
