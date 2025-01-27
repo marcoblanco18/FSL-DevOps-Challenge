@@ -11,3 +11,6 @@ jobs:
           node-version: '20'
       - run: npm install -g bats
       - run: bats -v
+      - name: Run ESLint
+        # eslint exits 1 if it finds anything to report
+        run: node_modules/.bin/eslint build docs lib script spec-main -f node_modules/@microsoft/eslint-formatter-sarif/sarif.js -o results.sarif || true
