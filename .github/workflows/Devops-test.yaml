@@ -1,0 +1,27 @@
+name: Devops-tests
+on: [push]
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout repo
+        uses: actions/checkout@v4
+      - name: setup nodejs
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: npm install    
+        run: npm install 
+      - name:  run Linter (ESLint)   
+        run: npm run lint
+      - name:  run Linter (ESLint) 
+        run: npm run lint
+      -name: Formatter (Prettier) npm run prettier
+       run: npm run prettier
+      -name: Test (Jest) CI=true npm run test
+       run: npm run test
+      -name: Build npm run build
+       run : npm run build
+
+
+
