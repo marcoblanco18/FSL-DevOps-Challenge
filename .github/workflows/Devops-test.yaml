@@ -15,4 +15,4 @@ jobs:
         # eslint exits 1 if it finds anything to report
         run: npm install -g eslint
       - name: npm run lint  
-        run: npm run lint npx
+        run: ./node_modules/.bin/eslint --init && npm run lint npx
