@@ -13,7 +13,7 @@ jobs:
       - name: npm install    
         run: npm install npx 
       - name:  run Linter (ESLint)   
-        run: npm init @eslint/config@latest && npx eslit yourfile.js
+        run: npx eslint --init && npm run lint
       - name: Formatter (Prettier) npm run prettier
         run: npm run prettier
       - name: Test (Jest) CI=true npm run test
