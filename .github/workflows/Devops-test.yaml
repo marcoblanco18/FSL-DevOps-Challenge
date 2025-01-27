@@ -9,7 +9,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install -g bats
+      - run: npm install npx
       
       - name: Run ESLint
         # eslint exits 1 if it finds anything to report
