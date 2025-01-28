@@ -10,6 +10,6 @@ jobs:
         with:
           node-version: '20'
       - name : installl npm
-        run: npm install npx
+        run: npm install 
 
     
