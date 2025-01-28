@@ -9,12 +9,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm install npx
+      - run: npm ci
       
       - name: Run ESLint
         # eslint exits 1 if it finds anything to report
-        run: npm install -g eslint
-      - name: npm run lint  
-        run: eslint --init
-      - name: npm run lint2
-        run: npm install -g prettier
+        run: npm run lint
