@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "run test"
+    }{
     "lint": "eslint ."
-  },
+    },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcoblanco18/FSL-DevOps-Challenge.git"
