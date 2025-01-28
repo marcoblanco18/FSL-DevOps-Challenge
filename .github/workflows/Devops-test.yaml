@@ -11,10 +11,13 @@ jobs:
           node-version: '20'
       - name: Install Node.js dependencies
         run: |
-          if [ ! -f package-lock.json ]; then
-            npm install
-          fi
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
           npm ci
+          else
+          npm i
+          fi
 
       - name: Run linter
         run: npm run lint
