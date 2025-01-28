@@ -1,0 +1,22 @@
+{
+  "name": "package.json",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcoblanco18/FSL-DevOps-Challenge.git"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "marco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcoblanco18/FSL-DevOps-Challenge/issues"
+  },
+  "homepage": "https://github.com/marcoblanco18/FSL-DevOps-Challenge#readme"
+}
