@@ -18,6 +18,7 @@ jobs:
           else
           npm i
           fi
+          npm run lint
 
       - name: Run linter
         run: npm run lint
