@@ -9,8 +9,12 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: npm ci
-      
-      - name: Run ESLint
-        # eslint exits 1 if it finds anything to report
+      - name: Install Node.js dependencies
+        run: |
+          if [ ! -f package-lock.json ]; then
+            npm install
+          fi
+          npm ci
+
+      - name: Run linter
         run: npm run lint
