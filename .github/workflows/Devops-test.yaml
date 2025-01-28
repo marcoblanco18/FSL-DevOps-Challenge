@@ -11,5 +11,7 @@ jobs:
           node-version: '20'
       - name : installl npm
         run: npm install 
+      - name: run lister
+        run: npm run lint
 
     
