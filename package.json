@@ -4,9 +4,9 @@
   "description": "test",
   "main": "index.js",
   "scripts": {
-    "test": "run test",
-    "lint": "run lint "
-    },
+    "test": "run test"
+    "lint": "eslint ."
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcoblanco18/FSL-DevOps-Challenge.git"
@@ -19,8 +19,8 @@
   "bugs": {
     "url": "https://github.com/marcoblanco18/FSL-DevOps-Challenge/issues"
   },
+  "homepage": "https://github.com/marcoblanco18/FSL-DevOps-Challenge#readme",
   "devDependencies": {
-    "eslint": "^7.32.0"
-   }, 
-  "homepage": "https://github.com/marcoblanco18/FSL-DevOps-Challenge#readme"
+    "eslint": "^9.19.0"
+  }
 }
